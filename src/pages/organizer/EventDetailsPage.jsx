@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { format, parseISO } from "date-fns";
+import format from "date-fns/format";
+import parseISO from "date-fns/parseISO";
 import { useAuth } from "../../hooks/useAuth";
 import OrganizerSidebar from "../../components/layout/OrganizerSidebar";
 
