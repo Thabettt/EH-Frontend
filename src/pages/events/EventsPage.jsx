@@ -4,7 +4,7 @@ import { useAuth } from "../../hooks/useAuth";
 import EventCard from "../../components/events/EventCard";
 import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
-import { debounce } from "lodash";
+import debounce from "lodash/debounce";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 const EventsPage = () => {
