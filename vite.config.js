@@ -1,5 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import pkg from "./package.json";
+
+// Create an array of dependency names from package.json
+const dependencies = Object.keys(pkg.dependencies || {});
 
 export default defineConfig({
   plugins: [react()],
@@ -9,7 +13,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ["date-fns"],
+      external: dependencies,
     },
   },
 });
